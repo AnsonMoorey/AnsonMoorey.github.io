@@ -7,12 +7,12 @@ h1 {
 p {
   font-size: 35px;
   font-color: #a1a1a1;
-  margins: 20px;
+  margin: 20px;
 }
 
 .header_div {
   background-color: #636363;
   outline-color: #000000;
   text-align: center;
-  margins: 200px;
+  margin: 200px;
 }
