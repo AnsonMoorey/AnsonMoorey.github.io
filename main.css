@@ -12,6 +12,7 @@ p {
 .header_div {
   background-color: #636363;
   outline-color: #000000;
+  outline-style: solid;
   text-align: center;
   margin: 100px;
 }
