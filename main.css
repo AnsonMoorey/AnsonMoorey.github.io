@@ -1,5 +1,10 @@
 h1 {
-  font-size: 12px;
+  font-size: 120px;
+  text-align: center;
+}
+
+p {
+  font-size: 15px;
 }
 
 .header_div {
