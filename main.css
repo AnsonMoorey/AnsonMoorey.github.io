@@ -10,6 +10,10 @@ p {
   font-color: #a1a1a1;
 }
 
+html {
+  margin: 0;
+}
+
 .header_div {
   background-color: #8c8c8c;
   border-style: solid;
