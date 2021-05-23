@@ -1,9 +1,8 @@
 h1 {
   font-size: 100px;
-  font-family: 'Oswald';
+  font-family: 'Oswald', 'Helvetica';
   text-align: center;
   border-style: none;
-  background-color: #ff0000;
 }
 
 html, body {
@@ -14,10 +13,12 @@ html, body {
 .header_div {
   background-color: #8c8c8c;
   text-align: center;
+  border-style: solid;
+  border-color: #8c8c8c;
 }
 
 #copyright {
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Arial";
   text-align: center;
 }
