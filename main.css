@@ -20,3 +20,9 @@ html, body {
   border-style: solid;
   text-align: center;
 }
+
+#copyright {
+  font-size: 6px;
+  font-family: "Arial";
+  text-align: center;
+}
