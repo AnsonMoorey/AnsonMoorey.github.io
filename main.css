@@ -17,7 +17,7 @@ html, body {
 
 .header_div {
   background-color: #8c8c8c;
-  border-style: none;
+  border-style: solid;
   text-align: center;
 }
 
