@@ -5,7 +5,13 @@ h1 {
   border-style: none;
 }
 
-html, body {
+html {
+  margin: 0;
+  padding: 0;
+  background-image: 'DSC_0891 - Amplified Colour.JPG';
+}
+
+body {
   margin: 0;
   padding: 0;
 }
