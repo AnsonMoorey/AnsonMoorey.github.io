@@ -5,6 +5,12 @@ h1 {
   border-style: none;
 }
 
+h3 {
+  font-family: 'Oswald', 'Helvetica';
+  text-align: center;
+  border-style: none;
+}
+
 html {
   margin: 0;
   padding: 0;
