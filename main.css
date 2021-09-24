@@ -9,6 +9,9 @@ h3 {
   font-family: 'Oswald', 'Helvetica';
   text-align: center;
   border-style: none;
+}
+
+a {
   font-style: none;
   font-color: #000000;
 }
