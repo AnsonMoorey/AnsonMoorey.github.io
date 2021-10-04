@@ -14,32 +14,25 @@
         <h3><a href="/NasaViewingCentre.html">Nasa 3D Viewer</a> • <a href="/index.html">Home</a></h3>
     </div>
     <footer>
-        <p id="copyright">© Anson Moorey 2021</p>
         <p id="infodisplay">...</p>
+        <p id="copyright">© Anson Moorey 2021</p>
     </footer>
-    <script>
-        // Opera 8.0+
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 
+<script>
+// Opera 8.0+
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 // Firefox 1.0+
 var isFirefox = typeof InstallTrigger !== 'undefined';
-
 // Safari 3.0+ "[object HTMLElementConstructor]" 
 var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
-
 // Internet Explorer 6-11
 var isIE = /*@cc_on!@*/false || !!document.documentMode;
-
 // Edge 20+
 var isEdge = !isIE && !!window.StyleMedia;
-
 // Chrome 1 - 79
 var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-
 // Edge (based on chromium) detection
 var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
-
-
 if (isFirefox) {
     var output = 'Firefox';
 } else if (isChrome) {
@@ -55,8 +48,8 @@ if (isFirefox) {
 } else if (isEdgeChromium){
     var output = 'Edge Chromium';
 }
-
 document.getElementById("infodisplay").innerHTML = output;
-    </script>
+</script>
+
 </body>
 </html>
