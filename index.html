@@ -52,11 +52,6 @@ if (isFirefox) {
 } else {
     output += 'Unknown Browser';
 }
-
-$.getJSON('https://api.db-ip.com/v2/free/self', function(data) {
-output += JSON.stringify(data, null, 2);
-});
-
 output += '<hr>';
 document.getElementById("infodisplay").innerHTML = output;
 </script>
