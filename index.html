@@ -49,6 +49,8 @@ if (isFirefox) {
     output += 'Edge';
 } else if (isEdgeChromium){
     output += 'Edge Chromium';
+} else {
+    output += 'Unknown Browser';
 }
 output += '<hr>';
 document.getElementById("infodisplay").innerHTML = output;
