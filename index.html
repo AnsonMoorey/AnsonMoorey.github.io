@@ -33,21 +33,24 @@ var isEdge = !isIE && !!window.StyleMedia;
 var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
 // Edge (based on chromium) detection
 var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
+
+var output = 'You are using ';
 if (isFirefox) {
-    var output = 'Firefox';
+    output += 'Firefox';
 } else if (isChrome) {
-    var output = 'Chrome';
+    output += 'Chrome';
 } else if (isSafari){
-    var output = 'Safari';
+    output += 'Safari';
 } else if (isOpera){
-    var output = 'Opera';
+    output += 'Opera';
 } else if (isIE){
-    var output = 'Internet Explorer';
+    output += 'Internet Explorer';
 } else if (isEdge){
-    var output = 'Edge';
+    output += 'Edge';
 } else if (isEdgeChromium){
-    var output = 'Edge Chromium';
+    output += 'Edge Chromium';
 }
+output += '<hr>';
 document.getElementById("infodisplay").innerHTML = output;
 </script>
 
