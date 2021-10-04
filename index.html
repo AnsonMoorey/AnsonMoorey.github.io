@@ -39,19 +39,23 @@ var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.r
 // Edge (based on chromium) detection
 var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
 
-// Blink engine detection
-var isBlink = (isChrome || isOpera) && !!window.CSS;
 
+if (isFirefox) {
+    var output = 'Firefox';
+} else if (isChrome) {
+    var output = 'Chrome';
+} else if (isSafari){
+    var output = 'Safari';
+} else if (isOpera){
+    var output = 'Opera';
+} else if (isIE){
+    var output = 'Internet Explorer';
+} else if (isEdge){
+    var output = 'Edge';
+} else if (isEdgeChromium){
+    var output = 'Edge Chromium';
+}
 
-var output = 'Detecting browsers by ducktyping:<hr>';
-output += 'isFirefox: ' + isFirefox + '<br>';
-output += 'isChrome: ' + isChrome + '<br>';
-output += 'isSafari: ' + isSafari + '<br>';
-output += 'isOpera: ' + isOpera + '<br>';
-output += 'isIE: ' + isIE + '<br>';
-output += 'isEdge: ' + isEdge + '<br>';
-output += 'isEdgeChromium: ' + isEdgeChromium + '<br>';
-output += 'isBlink: ' + isBlink + '<br>';
 document.getElementById("infodisplay").innerHTML = output;
     </script>
 </body>
