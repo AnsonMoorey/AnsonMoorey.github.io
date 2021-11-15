@@ -39,3 +39,8 @@ footer {
   font-family: "Arial";
   text-align: center;
 }
+
+.quote {
+  font-family: "Oswald";
+  margin: 40px;
+}
