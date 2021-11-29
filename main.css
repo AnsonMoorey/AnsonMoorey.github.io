@@ -47,4 +47,5 @@ footer {
   font-family: "Oswald";
   margin-left: 10%;
   margin-right: 10%;
+  layout: block;
 }
