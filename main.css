@@ -33,6 +33,10 @@ body {
   border-color: #8c8c8c;
 }
 
+#lighter_text {
+  color: #bfbfbf;
+}
+
 footer {
   font-size: 12px;
   font-family: "Arial";
@@ -43,8 +47,4 @@ footer {
   font-family: "Oswald";
   margin-left: 10%;
   margin-right: 10%;
-}
-
-#lighter_text {
-  color: #bfbfbf;
 }
