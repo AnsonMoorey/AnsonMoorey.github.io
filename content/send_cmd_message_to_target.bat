@@ -1,4 +1,4 @@
-echo off
+@echo off
 title Send CMD Message to Target
 set /P target=Enter Target PC:
 set /P sec=Enter Display Time (secs):
