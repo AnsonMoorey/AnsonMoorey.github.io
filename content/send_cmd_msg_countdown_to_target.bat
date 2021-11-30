@@ -1,4 +1,4 @@
-echo off
+@echo off
 title Send CMD MSG Countdown With a Final Message
 set /P target=Enter Target PC:
 set /P len=Enter Countdown Length:
