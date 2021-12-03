@@ -1,3 +1,6 @@
+:: Created by Anson M.
+:: My discord: Drifter#1403
+
 @echo off
 title Send CMD MSG Countdown With a Final Message
 set /P target=Enter Target PC:
