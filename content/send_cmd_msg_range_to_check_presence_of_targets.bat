@@ -1,3 +1,6 @@
+:: Created by Anson M.
+:: My discord: Drifter#1403
+
 @echo off
 title Check Presence of a Range of PCs
 
@@ -8,7 +11,8 @@ set /P message=Enter Message:
 
 echo.
 echo Beginning PC Presence Check
-echo An error signifies that the specified PC is offline or does not exist.
+echo If you get an error after a PC Presence Check, then the specified PC is offline or does not exist.
+echo Otherwise, the specified PC is online and has received a 1 second message from you,
 echo.
 
 for /l %%x in (%range_start%, 1, %range_end%) do (
