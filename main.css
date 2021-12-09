@@ -58,6 +58,6 @@ footer {
 button:hover {
   background-color:#595959;
   position: relative;
-  bottom:4;
-  right: 4;
+  top:4;
+  left: 4;
 }
