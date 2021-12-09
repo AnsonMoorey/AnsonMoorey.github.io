@@ -55,6 +55,14 @@ footer {
   display: block;
 }
 
+button {
+  background-color:#696969;
+  font-family: "Oswald";
+}
+
 button:hover {
   background-color:#ff0000;
+  position: relative;
+  bottom: 4px;
+  right: 4px;
 }
