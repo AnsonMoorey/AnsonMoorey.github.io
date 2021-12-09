@@ -63,6 +63,6 @@ button {
 button:hover {
   background-color:#595959;
   position: relative;
-  top: 2px;
-  left: 2px;
+  top: 1px;
+  left: 1px;
 }
