@@ -80,4 +80,7 @@ button:hover {
 
 .game_boundary {
   border: 2px solid black;
+  background-color: #dddddd;
+  margin: auto;
+  width: 100px;
 }
