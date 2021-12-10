@@ -77,3 +77,7 @@ button:hover {
 .subpage_header {
   margin-bottom: 20px;
 }
+
+.game {
+  border: 2px solid black;
+}
