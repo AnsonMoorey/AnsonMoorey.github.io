@@ -25,11 +25,17 @@
         <p>© Anson Moorey 2021</p>
     </footer>
     <script>
-        //document.getElementById("sprite").style.left = output;
+        document.getElementById("sprite").style.position = "relative";
+        document.getElementById("sprite").style.bottom = "10px";
         document.addEventListener('keydown', pressKey);
         function pressKey(e) {
             var key_pressed = `${e.code}`;
             document.getElementById("text_update").innerHTML = key_pressed;
+            if (key_pressed == "ArrowUp") {
+                document.getElementById("sprite").style.bottom = "20px";
+            } elif (key_pressed == "ArrowDown") {
+                document.getElementById("sprite").style.bottom = "0px";
+            }
         }
 </script>
     
