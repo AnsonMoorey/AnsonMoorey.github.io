@@ -23,6 +23,14 @@
         <p><a href="/README.txt">readme.txt</a></p>
         <p>© Anson Moorey 2021</p>
     </footer>
-
+    <script>
+        //document.getElementById("sprite").style.left = output;
+        document.addEventListener('keydown', pressKey);
+        function pressKey(e) {
+            var key_pressed = `${e.code}`;
+            document.getElementById("text_update").innerHTML = key_pressed;
+        }
+</script>
+    
 </body>
 </html>
