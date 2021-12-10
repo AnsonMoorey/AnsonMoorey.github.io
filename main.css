@@ -66,3 +66,9 @@ button:hover {
   top: 1px;
   left: 1px;
 }
+
+.subpage_top_left_logo {
+  width: 50;
+  height: 50;
+  margin: 25;
+}
