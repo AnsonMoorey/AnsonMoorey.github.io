@@ -15,9 +15,9 @@
     <div class="subpage_header">
         <a href="/index.html"><img src="ThickerRingsFavicon-Trimmed Corners.png" alt="Site Logo" class="subpage_top_left_logo"></a>
         <h2 class="default_text" id="lighter_text" style="text-align:center; margin-top:40px; margin-bottom:40px; display:inline;">Game</h2>
+        <p class="default_text" id="text_update">Placeholder</p>
     </div>
     <div class="game_boundary">
-        <p id="text_update">Placeholder</p>
         <img id="sprite" src="ThickerRingsFavicon-Trimmed Corners.png" alt="Game Sprite" width=20 height=20>
     </div>
     <footer>
@@ -27,14 +27,19 @@
     <script>
         document.getElementById("sprite").style.position = "relative";
         document.getElementById("sprite").style.bottom = "10px";
+        document.getElementById("sprite").style.left = "10px";
+        var horizontal_pos = 10;
+        var vertical_pos = 10;
         document.addEventListener('keydown', pressKey);
         function pressKey(e) {
             var key_pressed = `${e.code}`;
             document.getElementById("text_update").innerHTML = key_pressed;
             if (key_pressed == "ArrowUp") {
-                document.getElementById("sprite").style.bottom = "20px";
+                vertical_pos += 10;
+                document.getElementById("sprite").style.bottom = vertical_pos + "px";
             } else if (key_pressed == "ArrowDown") {
-                document.getElementById("sprite").style.bottom = "0px";
+                vertical_pos -= 10;
+                document.getElementById("sprite").style.bottom = vertical_pos + "px";
             }
         }
 </script>
