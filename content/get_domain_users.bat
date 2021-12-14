@@ -1,0 +1,1 @@
+net user /DOMAIN >> domain_users.txt
