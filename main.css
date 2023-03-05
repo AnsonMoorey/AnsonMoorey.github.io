@@ -18,6 +18,13 @@ h3 {
   color: #a6a6a6;
 }
 
+p {
+  font-family: 'Oswald', 'Helvetica';
+  padding-left: 60px;
+  padding-right: 60px;
+  color: #a6a6a6;
+}
+
 img {
   text-align: left;
   padding: 5px;
