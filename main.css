@@ -5,10 +5,8 @@ h1 {
   border-style: none;
 }
 
-h3 {
+h2, h3, h4 {
   font-family: 'Oswald', 'Helvetica';
-  text-align: center;
-  border-style: none;
 }
 
 img {
