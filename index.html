@@ -3,10 +3,10 @@
 <html>
 <head>
     <style>
-        html {background-image:url("SelfMade Dark background.png");background-repeat:no-repeat;background-attachment:fixed;}
+        html {background-image:url("dark_bg.png");background-repeat:no-repeat;background-attachment:fixed;}
     </style>
     <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="ThickerRingsFavicon-Trimmed Corners.png">
+    <link rel="icon" href="cornerless favicon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
 </head>
@@ -14,55 +14,11 @@
 <body>
     <div class="header_div">
         <h1>Anson<br>Moorey</h1>
-        <h3><a href="/content.html">Content</a> • <a href="/index.html">Home</a></h3>
+        <h3><a href="/index.html">Home</a> • <a>Content</a></h3>
     </div>
     <footer>
-        <p id="infodisplay">...</p>
-        <p><a href="/README.txt">readme.txt</a></p>
-        <p>© Anson Moorey 2022</p>
+        <p>© Anson Moorey 2023</p>
     </footer>
-
-<script>
-// Opera 8.0+
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-// Firefox 1.0+
-var isFirefox = typeof InstallTrigger !== 'undefined';
-// Safari 3.0+ "[object HTMLElementConstructor]" 
-var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
-// Internet Explorer 6-11
-var isIE = /*@cc_on!@*/false || !!document.documentMode;
-// Edge 20+
-var isEdge = !isIE && !!window.StyleMedia;
-// Chrome 1 - 79
-var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
-// Edge (based on chromium) detection
-var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
-
-var output = 'You are using ';
-if (isFirefox) {
-    output += 'Firefox';
-} else if (isChrome) {
-    output += 'Chrome';
-} else if (isSafari){
-    output += 'Safari';
-} else if (isOpera){
-    output += 'Opera';
-} else if (isIE){
-    output += 'Internet Explorer';
-} else if (isEdge){
-    output += 'Edge';
-} else if (isEdgeChromium){
-    output += 'Edge Chromium';
-} else {
-    output += 'Unknown Browser';
-}
-output += '<br>';
-document.getElementById("infodisplay").innerHTML = output;
-    
-$.getJSON('https://api.db-ip.com/v2/free/self', function(data) {
-  console.log(JSON.stringify(data, null, 2));
-});
-</script>
 
 </body>
 </html>
