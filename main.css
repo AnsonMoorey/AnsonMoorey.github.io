@@ -11,6 +11,11 @@ h3 {
   border-style: none;
 }
 
+img {
+  text-align: left;
+  padding: 25px;
+}
+
 a {
   font-style: none;
   color: #000000;
