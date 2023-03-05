@@ -77,11 +77,3 @@ button:hover {
 .subpage_header {
   margin-bottom: 20px;
 }
-
-.game_boundary {
-  border: 2px solid black;
-  background-color: #cccccc;
-  margin: auto;
-  width: 600px;
-  height: 400px;
-}
