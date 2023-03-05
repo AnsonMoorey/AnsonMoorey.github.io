@@ -19,6 +19,8 @@ h3 {
 }
 
 p {
+  display: inline-block;
+  max-width: 40%
   font-family: 'Oswald', 'Helvetica';
   padding-left: 60px;
   padding-right: 60px;
