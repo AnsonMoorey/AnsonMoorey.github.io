@@ -34,7 +34,12 @@ img {
 
 a {
   font-style: underline;
+  color: #a6a6a6;
 }
+
+ul {
+  color: #000000;
+  font-family: 'Oswald', 'Helvetica';
 
 html {
   margin: 0;
