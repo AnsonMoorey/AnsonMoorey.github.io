@@ -32,14 +32,14 @@ img {
   padding-bottom: 25px;
 }
 
-a {
-  font-style: underline;
-  color: #a6a6a6;
-}
-
 ul {
   color: #000000;
   font-family: 'Oswald', 'Helvetica';
+}
+
+a {
+  font-style: underline;
+  color: #a6a6a6;
 }
 
 html {
