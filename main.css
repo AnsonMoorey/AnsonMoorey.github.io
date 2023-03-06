@@ -33,8 +33,7 @@ img {
 }
 
 a {
-  font-style: none;
-  color: #000000;
+  font-style: underline;
 }
 
 html {
@@ -52,6 +51,12 @@ header {
   text-align: center;
   border-style: solid;
   border-color: #8c8c8c;
+  display: flex;
+  align-items: center;
+}
+
+header * {
+  display: inline;
 }
 
 #lighter_text {
