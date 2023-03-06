@@ -39,6 +39,11 @@ ul {
   font-size: 20px;
 }
 
+nav * {
+  color: #000000;
+  font-family: 'Oswald', 'Helvetica';
+}
+
 a {
   font-style: underline;
   color: #a6a6a6;
