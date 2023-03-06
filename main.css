@@ -36,10 +36,10 @@ li {
   color: #000000;
   font-family: 'Oswald', 'Helvetica';
   padding: 25px;
-  font-size: 20px;
+  font-size: 40px;
 }
 
-nav * {
+ul * {
   color: #000000;
   font-family: 'Oswald', 'Helvetica';
 }
