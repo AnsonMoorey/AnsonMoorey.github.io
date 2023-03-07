@@ -35,8 +35,15 @@ img {
 li {
   color: #000000;
   font-family: 'Oswald', 'Helvetica';
+  font-style: none;
   padding: 25px;
   font-size: 40px;
+}
+
+li:hover {
+  position: relative;
+  top: 2px;
+  left: 2px;
 }
 
 ul * {
