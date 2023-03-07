@@ -1,25 +1,26 @@
-h1 {
+h1 h2 h3 p li a {
   font-family: 'Oswald', 'Helvetica';
+}
+
+
+h1 {
   text-align: center;
   color: #a6a6a6;
 }
 
 h2 {
-  font-family: 'Oswald', 'Helvetica';
   padding-left: 4%;
   padding-right: 4%;
   color: #a6a6a6;
 }
 
 h3 {
-  font-family: 'Oswald', 'Helvetica';
   padding-left: 6%;
   padding-right: 6%;
   color: #a6a6a6;
 }
 
 p {
-  font-family: 'Oswald', 'Helvetica';
   padding-left: 8%;
   padding-right: 8%;
   color: #a6a6a6;
@@ -34,8 +35,6 @@ img {
 
 li {
   color: #000000;
-  font-family: 'Oswald', 'Helvetica';
-  font-style: none;
   padding: 25px;
   font-size: 40px;
 }
@@ -46,13 +45,9 @@ li:hover {
   left: 2px;
 }
 
-ul * {
-  color: #000000;
-  font-family: 'Oswald', 'Helvetica';
-}
 
 a {
-  font-style: underline;
+  font-style: none;
   color: #a6a6a6;
 }
 
@@ -79,10 +74,6 @@ header * {
   display: inline;
 }
 
-#lighter_text {
-  color: #bfbfbf;
-}
-
 footer {
   font-size: 12px;
   font-family: "Arial";
@@ -90,35 +81,4 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-.default_text {
-  font-family: "Oswald";
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 30px;
-  display: block;
-}
-
-button {
-  background-color:#696969;
-  font-family: "Oswald";
-}
-
-button:hover {
-  background-color:#595959;
-  position: relative;
-  top: 1px;
-  left: 1px;
-}
-
-.subpage_top_left_logo {
-  width: 70px;
-  height: 70px;
-  margin: 10px;
-  margin-bottom:0;
-}
-
-.subpage_header {
-  margin-bottom: 20px;
 }
