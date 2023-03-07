@@ -42,8 +42,8 @@ li {
 
 li:hover {
   position: relative;
-  top: 2px;
-  left: 2px;
+  top: -1px;
+  left: -1px;
 }
 
 
