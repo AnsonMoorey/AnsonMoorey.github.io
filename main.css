@@ -37,7 +37,7 @@ li {
   color: #000000;
   padding: 25px;
   font-size: 40px;
-  font-decoration: none;
+  text-decoration: none;
 }
 
 li:hover {
@@ -48,7 +48,7 @@ li:hover {
 
 
 a {
-  font-style: none;
+  text-decoration: none;
   color: #a6a6a6;
 }
 
