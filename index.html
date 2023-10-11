@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <!-- Glad you've found me :) -->
 <html>
+    <style>
+        html {background-image:url("dark_bg.png");background-repeat:no-repeat;background-attachment:fixed;}
+    </style>
+    <script>
+        document.getElementById("title").innerHTML = "Hello";
+    </script>
     <header>
-        <style>
-            html {background-image:url("dark_bg.png");background-repeat:no-repeat;background-attachment:fixed;}
-        </style>
         <link rel="stylesheet" href="main.css">
         <link rel="icon" href="A Logo.png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -13,7 +16,7 @@
     </header>
     
     <body>
-        <h1>
+        <h1 id="title">
             Good Morning
         </h1>
     </body>
