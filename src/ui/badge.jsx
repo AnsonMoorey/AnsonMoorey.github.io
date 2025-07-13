@@ -1,0 +1,1 @@
+export function Badge({ children }) { return <span style={{border:'1px solid',padding:'2px 4px',borderRadius:'4px'}}>{children}</span> }
