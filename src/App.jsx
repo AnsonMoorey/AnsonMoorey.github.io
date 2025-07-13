@@ -1,30 +1,32 @@
+// src/App.jsx
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import Adventures from './pages/Adventures';
+import Engineering from './pages/Engineering';
+import './styles.css';
 
 export default function App() {
   return (
-    <div className="container">
-      <header>
-        <h1>Adventure Engineer</h1>
-        <p className="subtitle">Exploring the wild & building rocket engines 🚀</p>
-      </header>
-
-      <section className="section">
-        <h2>Backcountry Hikes & Ultraruns</h2>
-        <p>
-          Join me on epic backcountry trails and ultramarathons — pushing limits in nature’s toughest terrain.
-        </p>
-      </section>
-
-      <section className="section">
-        <h2>Mechanical Engineering & Rocketry</h2>
-        <p>
-          Passionate about building cutting-edge rocket engines with <a href="https://github.com/uorocketry" target="_blank" rel="noopener noreferrer">UORocketry</a>.
-        </p>
-      </section>
-
-      <footer>
-        <p>© 2025 Adventure Engineer</p>
-      </footer>
-    </div>
+    <Router>
+      <div className="app">
+        <nav className="navbar">
+          <h1 className="logo">Adventure Engineer</h1>
+          <ul className="nav-links">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/adventures">Adventures</Link></li>
+            <li><Link to="/engineering">Engineering</Link></li>
+          </ul>
+        </nav>
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/adventures" element={<Adventures />} />
+            <Route path="/engineering" element={<Engineering />} />
+          </Routes>
+        </main>
+        <footer className="footer">© 2025 Adventure Engineer</footer>
+      </div>
+    </Router>
   );
 }
