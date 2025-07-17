@@ -1,6 +1,6 @@
 // src/pages/Home.jsx
 import React from 'react';
-import './styles.css';
+import '../styles.css';
 import mountain from '../assets/mountain.jpg'; // Add suitable images in /assets
 import running from '../assets/running.jpg';
 import engine from '../assets/engine.jpg';
