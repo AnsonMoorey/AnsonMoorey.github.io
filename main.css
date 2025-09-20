@@ -139,6 +139,37 @@ html, body {
   mask-size: contain;
 }
 
+/* Individual horizontal positioning */
+.image-mask.A {
+	left: -5vw;
+	position: relative;
+	background-size: 50% auto;
+	background-position: 50% 6%;
+}
+.image-mask.B {
+	left: 5vw;
+	position:relative;
+	background-size: 50% auto;
+	background-position: 50% 50%;
+	margin-top: -40px;
+}
+
+.image-mask.C {
+	left: 5vw;
+	position:relative;
+	background-size: 50% auto;
+	background-position: 50% 50%;
+	margin-top: -40px;
+}
+
+.image-mask.D {
+	left: 5vw;
+	position:relative;
+	background-size: 50% auto;
+	background-position: 50% 50%;
+	margin-top: -40px;
+}
+
 
 
 /* ---------------- Socials ---------------- */
