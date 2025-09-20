@@ -130,7 +130,7 @@ html, body {
   height: 300px;
   background: url("Assets/maskBackground.jpg") center/cover no-repeat;
 
-  -webkit-mask-image: url("Assets/bang.png"); /* or .png */
+  -webkit-mask-image: url("Assets/parallelogram1.png"); /* or .png */
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
 
