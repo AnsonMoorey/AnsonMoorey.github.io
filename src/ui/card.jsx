@@ -1,2 +1,0 @@
-export function Card({ children }) { return <div style={{background:'white',border:'1px solid #ddd',borderRadius:8}}>{children}</div> }
-export function CardContent({ children, className }) { return <div className={className}>{children}</div> }
