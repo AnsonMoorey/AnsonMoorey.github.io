@@ -21,116 +21,98 @@ html, body {
 }
 
 .layer1 {
-	background-image: url("Assets/mountainBackground.jpg");
-	z-index: 1;
-	/* fade out top & bottom */
-	-webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black);
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-size: 100% 100%;
-	-webkit-mask-position: top;
-	
-	mask-image: linear-gradient(to bottom, transparent, black 0%, black);
-	mask-repeat: no-repeat;
-	mask-size: 100% 100%;
-	mask-position: top;
-	
-	border: 2px solid black;
+  background-image: url("Assets/mountainBackground.jpg");
+  z-index: 1;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-position: top;
+  mask-image: linear-gradient(to bottom, transparent, black 0%, black);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  mask-position: top;
 }
 
 .layer2 {
-	background-image: url("Assets/cloud1e.jpg");
-	z-index: 2;
-	/* fade out top & bottom */
-	-webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-size: 100% 100%;
-	-webkit-mask-position: center;
-	
-	mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
-	mask-repeat: no-repeat;
-	mask-size: 100% 100%;
-	mask-position: center;
+  background-image: url("Assets/cloud1e.jpg");
+  z-index: 2;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-position: center;
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  mask-position: center;
 }
 
 .layer3 {
-	background-image: url("Assets/cloudBackground.jpg");
-	z-index: 3;
+  background-image: url("Assets/cloudBackground.jpg");
+  z-index: 3;
 }
 
 .layer4 {
-	background-image: url("Assets/spaceBackground.jpg");
-	z-index: 4;
+  background-image: url("Assets/spaceBackground.jpg");
+  z-index: 4;
 }
 
-
-/* ---------------- Content ---------------- */
+/* ---------------- Content Wrapper ---------------- */
 .content {
   position: relative;
   z-index: 10; /* sits above parallax layers */
+  display: grid;
+  grid-template-columns: 1fr minmax(600px, 800px) 1fr; /* left - main - right */
+  gap: 2rem;
+  padding: 5vh 5vw;
+}
+
+/* ---------------- Sidebars ---------------- */
+.sidebar-left,
+.sidebar-right {
   display: flex;
   flex-direction: column;
-  align-items: center; /* center everything horizontally by default */
-  padding-top: 10vh;   /* space from top of viewport */
+  align-items: center;
+  gap: 2rem;
 }
 
 /* ---------------- Titles / H1 ---------------- */
 .title {
-  position: relative; /* parent for absolute children if needed */
-  width: 100%;
-  height: auto;       /* adjust as needed */
-  top: -10vh;
   font-family: "Anton", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  grid-column: 2; /* always in the middle column */
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-/* Base mask style */
 .font-mask {
   font-size: 7rem;
   font-weight: bolder;
-  margin: 0rem 0;
+  margin: 0;
   background-image: url("Assets/maskBackground.jpg");
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  position: relative; /* keep in flow */
-  text-align: center; /* default center */
+  text-align: center;
 }
 
-/* Individual horizontal positioning */
 .font-mask.A {
-	left: -5vw;
-	position: relative;
-	background-size: 50% auto;
-	background-position: 50% 6%;
+  background-size: 50% auto;
+  background-position: 50% 6%;
 }
 .font-mask.B {
-	left: 5vw;
-	position:relative;
-	background-size: 50% auto;
-	background-position: 50% 50%;
-	margin-top: -40px;
+  background-size: 50% auto;
+  background-position: 50% 50%;
+  margin-top: -40px;
 }
-
-.font-mask.C {
-	left: 5vw;
-	position:relative;
-	background-size: 50% auto;
-	background-position: 50% 50%;
-	margin-top: -40px;
-}
-
-
 
 /* ---------------- Image Masking ---------------- */
-
 .image-mask {
-  width: 300px;   /* size of the visible shape */
+  width: 300px;
   height: 300px;
   background: url("Assets/maskBackground.jpg") center/cover no-repeat;
 
-  -webkit-mask-image: url("Assets/parallelogram1.png"); /* or .png */
+  -webkit-mask-image: url("Assets/parallelogram1.png");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
 
@@ -139,41 +121,15 @@ html, body {
   mask-size: contain;
 }
 
-/* Individual horizontal positioning */
-.image-mask.A {
-	left: -5vw;
-	position: relative;
-	background-size: 50% auto;
-	background-position: 50% 6%;
+.sidebar-left .image-mask,
+.sidebar-right .image-mask {
+  background-size: cover;
+  margin: 1rem 0;
 }
-.image-mask.B {
-	left: 5vw;
-	position:relative;
-	background-size: 50% auto;
-	background-position: 50% 50%;
-	margin-top: -40px;
-}
-
-.image-mask.C {
-	left: 5vw;
-	position:relative;
-	background-size: 50% auto;
-	background-position: 50% 50%;
-	margin-top: -40px;
-}
-
-.image-mask.D {
-	left: 5vw;
-	position:relative;
-	background-size: 50% auto;
-	background-position: 50% 50%;
-	margin-top: -40px;
-}
-
-
 
 /* ---------------- Socials ---------------- */
 .socials {
+  grid-column: 2; /* stays in the center */
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -187,7 +143,6 @@ html, body {
   cursor: pointer;
   transition: transform 0.2s;
 }
-
 .socials img:hover {
   transform: scale(1.1);
 }
