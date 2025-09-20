@@ -134,7 +134,7 @@ html, body {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
 
-  mask-image: url("Assets/bang.png");
+  mask-image: url("Assets/parallelogram1.png");
   mask-repeat: no-repeat;
   mask-size: contain;
 }
