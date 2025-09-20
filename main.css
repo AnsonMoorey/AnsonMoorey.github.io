@@ -88,20 +88,11 @@ html, body {
   gap: 1.5rem;
 }
 
-/* ---------------- Sidebars ---------------- */
-.sidebar-left,
-.sidebar-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
 
 /* ---------------- Titles / H1 ---------------- */
 .title {
   font-family: "Anton", sans-serif;
   font-weight: 400;
-  grid-column: 2; /* always in the middle column */
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -116,14 +107,13 @@ html, body {
   -webkit-text-fill-color: transparent;
   color: transparent;
   text-align: center;
+  background-size: 50% auto;
 }
 
 .font-mask.A {
-  background-size: 50% auto;
   background-position: 50% 6%;
 }
 .font-mask.B {
-  background-size: 50% auto;
   background-position: 50% 50%;
   margin-top: -40px;
 }
@@ -143,11 +133,6 @@ html, body {
   mask-size: contain;
 }
 
-.sidebar-left .image-mask,
-.sidebar-right .image-mask {
-  background-size: cover;
-  margin: 1rem 0;
-}
 
 /* ---------------- Socials ---------------- */
 .socials {
@@ -167,4 +152,21 @@ html, body {
 }
 .socials img:hover {
   transform: scale(1.1);
+}
+
+/* Responsive Handling */
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr; /* single column */
+    gap: 1rem;
+  }
+
+  .left-column,
+  .right-column {
+    display: none; /* hide sidebars */
+  }
+
+  .main-column {
+    grid-column: 1; /* center becomes full-width */
+  }
 }
