@@ -161,8 +161,7 @@ html, body {
     gap: 1rem;
   }
 
-  .left-column,
-  .right-column {
+  .left-column, .right-column {
     display: none; /* hide sidebars */
   }
 
