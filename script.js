@@ -25,43 +25,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // MAP STUFF
 
-// Initialize map
-const map = L.map('map').setView([32.74620487745896, -16.99095898886067], 10); // starting coords
+  // Map setup for multiple maps
+  const mapDivs = document.querySelectorAll(".map");
 
-// Add tile layer (OpenStreetMap)
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-  maxZoom: 18,
-  attribution: 'Tiles © Esri'
-}).addTo(map);
+  mapDivs.forEach(div => {
+    const gpxFile = div.dataset.gpx;
 
-//Icons
-const startIcon = L.icon({
-  iconUrl: "Assets/start.png",
-  iconSize: [16, 16],   // adjust to your PNG size
-  iconAnchor: [8, 8]  // bottom-center of icon sits on point
-});
+    const map = L.map(div.id).setView([32.7462, -16.9910], 10); // default coords
 
-const endIcon = L.icon({
-  iconUrl: "Assets/end.png",
-  iconSize: [16, 16],
-  iconAnchor: [8, 8]
-});
+    L.tileLayer(
+      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+      { maxZoom: 18, attribution: 'Tiles © Esri' }
+    ).addTo(map);
 
-// Load GPX file
-new L.GPX("Assets/Madeira.gpx", {
-  async: true,
-    polyline_options: {
-    color: "#FC4C02",     // line color
-    weight: 4,        // line thickness
-    opacity: 1,     // transparency
-    lineCap: "round",  // style of line ends
-  },
-  markers: {
-    startIcon: startIcon,
-    endIcon: endIcon,
-    shadowUrl: null
-  },
-  display_wpt: false,
-}).on("loaded", function(e) {
-  map.fitBounds(e.target.getBounds()); // zoom to track
-}).addTo(map);
+    const startIcon = L.icon({
+      iconUrl: "Assets/start.png",
+      iconSize: [16, 16],
+      iconAnchor: [8, 8]
+    });
+    const endIcon = L.icon({
+      iconUrl: "Assets/end.png",
+      iconSize: [16, 16],
+      iconAnchor: [8, 8]
+    });
+
+    new L.GPX(gpxFile, {
+      async: true,
+      polyline_options: {
+        color: "#FC4C02",
+        weight: 4,
+        opacity: 1,
+        lineCap: "round",
+      },
+      markers: {
+        startIcon: startIcon,
+        endIcon: endIcon,
+        shadowUrl: null
+      },
+      display_wpt: false
+    })
+    .on("loaded", e => map.fitBounds(e.target.getBounds()))
+    .addTo(map);
+  });

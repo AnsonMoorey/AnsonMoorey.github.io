@@ -132,7 +132,7 @@ html, body {
 
 /* Map Stuff */
 
-#map {
+.map {
   width: 70%;
   height: 300px;
   margin: 0 auto;   /* centers it horizontally */
@@ -166,7 +166,7 @@ html, body {
     font-size: 12px;
 }
 .leaflet-control-attribution a {
-    color: #ffa500 !important;
+    color: #FC4C02 !important;
     text-decoration: none;
 }
 .leaflet-control-attribution a:hover {
