@@ -60,45 +60,21 @@ html, body {
 .content {
   position: relative;
   z-index: 10; /* sits above parallax layers */
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-}
-
-.main-column {
-  grid-column: 2; /* center */
+  max-width: 900px;   /* control content width */
+  margin: 0 auto;     /* center content */
+  padding: 0 1rem;    /* breathing room on small screens */
   text-align: center;
-  font-size: 6vw;
-  width: auto;
-  border: 3px solid black;
 }
-
-.left-column {
-  grid-column: 1; /* left rail */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* hug right edge */
-  border: 3px solid black;
-}
-
-.right-column {
-  grid-column: 3; /* right rail */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* hug left edge */
-  border: 3px solid black;
-}
-
 
 /* ---------------- Titles / H1 ---------------- */
 .title {
   font-family: "Anton", sans-serif;
   font-weight: 400;
-  text-align: center;
   margin-bottom: 2rem;
 }
 
 .font-mask {
-  font-size: 7rem;
+  font-size: clamp(2rem, 7vw, 7rem); /* responsive scaling */
   font-weight: bolder;
   margin: 0;
   background-image: url("Assets/maskBackground.jpg");
@@ -106,16 +82,16 @@ html, body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  text-align: center;
   background-size: 50% auto;
 }
 
 .font-mask.A {
   background-position: 50% 6%;
 }
+
 .font-mask.B {
   background-position: 50% 50%;
-  margin-top: -40px;
+  margin-top: -0.5em;
 }
 
 /* ---------------- Image Masking ---------------- */
@@ -134,10 +110,8 @@ html, body {
   border: 3px solid black;
 }
 
-
 /* ---------------- Socials ---------------- */
 .socials {
-  grid-column: 2; /* stays in the center */
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -151,11 +125,14 @@ html, body {
   cursor: pointer;
   transition: transform 0.2s;
 }
+
 .socials img:hover {
   transform: scale(1.1);
 }
 
-iframe.strava-widget {
-  filter: invert(1) hue-rotate(180deg) brightness(0.9);
-  border-radius: 10px;
+/* Map Stuff */
+
+#map {
+  width: 100%;
+  height: 500px;
 }

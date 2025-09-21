@@ -6,6 +6,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+	<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-gpx"></script> <!-- GPX plugin -->
 </head>
 	<body>
 		<div class="parallax-layer layer1"></div>
@@ -13,10 +16,6 @@
 		<div class="parallax-layer layer3"></div>
 		<div class="parallax-layer layer4"></div>
 		<main class="content">
-			<div class="left-column">
-				<div class="image-mask A"></div>
-				<div class="image-mask B"></div>
-			</div>
 			<div class ="main-column">
 				<div class="title">
 					<h1 class="font-mask A">ANSON</h1>
@@ -33,13 +32,8 @@
 						<img src="Assets/instagram.png" alt="Follow me on Instagram">
 					</a>
 				</div>
-				<iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/64003317/activity-summary/9ba4bc542a9120864b229ffda958ff7b8d3f331e'></iframe>
-				<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="ansonmoorey" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/ansonmoorey?trk=profile-badge">Anson Moorey</a></div>
+				<div id="map"></div>
 			</div>
-			<aside class="right-column">
-				<div class="image-mask C"></div>
-				<div class="image-mask D"></div>
-			</aside>
 		</main>
 		<script src="script.js"></script>
 	</body>

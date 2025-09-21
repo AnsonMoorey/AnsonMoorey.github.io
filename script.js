@@ -22,3 +22,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // Update on scroll
   window.addEventListener("scroll", updateLayers);
 });
+
+// MAP STUFF
+
+// Initialize map
+const map = L.map('map').setView([32.74620487745896, -16.99095898886067], 13); // starting coords
+
+// Add tile layer (OpenStreetMap)
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  maxZoom: 18,
+  attribution: 'Tiles © Esri'
+}).addTo(map);
+
+// Load GPX file
+new L.GPX("Assets/Madeira.gpx", {
+  async: true,
+  marker_options: {
+	startIconUrl: "https://unpkg.com/leaflet-gpx/pin-icon-start.png",
+	endIconUrl: "https://unpkg.com/leaflet-gpx/pin-icon-end.png",
+	shadowUrl: "https://unpkg.com/leaflet-gpx/pin-shadow.png"
+  }
+}).on("loaded", function(e) {
+  map.fitBounds(e.target.getBounds()); // zoom to track
+}).addTo(map);
