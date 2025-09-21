@@ -34,18 +34,31 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
   attribution: 'Tiles © Esri'
 }).addTo(map);
 
+//Icons
+const startIcon = L.icon({
+  iconUrl: "Assets/start.png",
+  iconSize: [32, 32],   // adjust to your PNG size
+  iconAnchor: [16, 16]  // bottom-center of icon sits on point
+});
+
+const endIcon = L.icon({
+  iconUrl: "Assets/end.png",
+  iconSize: [32, 32],
+  iconAnchor: [16, 16]
+});
+
 // Load GPX file
 new L.GPX("Assets/Madeira.gpx", {
   async: true,
     polyline_options: {
     color: "#FC4C02",     // line color
     weight: 4,        // line thickness
-    opacity: 0.8,     // transparency
+    opacity: 1,     // transparency
     lineCap: "round",  // style of line ends
   },
   marker_options: {
-	startIconUrl: "Assets/start.png",
-	endIconUrl: "Assets/end.png",
+	startIcon: startIcon,
+	endIcon: endIcon,
 	shadowUrl: "",
   }
 }).on("loaded", function(e) {
