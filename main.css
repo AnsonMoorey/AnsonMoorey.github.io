@@ -138,3 +138,19 @@ html, body {
   margin: 0 auto;   /* centers it horizontally */
   display: block;
 }
+
+/* Dark themed zoom buttons */
+.leaflet-control-zoom a {
+    background-color: #222;   /* dark gray background */
+    color: #fff;              /* white + / - */
+    border: 1px solid #444;   /* subtle border */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* optional shadow */
+    font-weight: bold;
+}
+
+/* Hover state */
+.leaflet-control-zoom a:hover {
+    background-color: #555;   /* slightly lighter on hover */
+    color: #ffd700;           /* golden text on hover */
+}
