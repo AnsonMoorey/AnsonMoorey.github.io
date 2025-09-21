@@ -60,7 +60,8 @@ new L.GPX("Assets/Madeira.gpx", {
     startIcon: null,
     endIcon: null,
     shadowUrl: null
-  }
+  },
+  display_wpt: false,
 }).on("loaded", function(e) {
   map.fitBounds(e.target.getBounds()); // zoom to track
 }).addTo(map);
