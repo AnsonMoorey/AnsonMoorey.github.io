@@ -41,12 +41,12 @@ new L.GPX("Assets/Madeira.gpx", {
     color: "#FC4C02",     // line color
     weight: 4,        // line thickness
     opacity: 0.8,     // transparency
-    lineCap: "round"  // style of line ends
+    lineCap: "round",  // style of line ends
   },
   marker_options: {
 	startIconUrl: "Assets/start.png",
 	endIconUrl: "Assets/end.png",
-	shadowUrl: "https://unpkg.com/leaflet-gpx/pin-shadow.png"
+	shadowUrl: "",
   }
 }).on("loaded", function(e) {
   map.fitBounds(e.target.getBounds()); // zoom to track
