@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // MAP STUFF
 
 // Initialize map
-const map = L.map('map').setView([32.74620487745896, -16.99095898886067], 13); // starting coords
+const map = L.map('map').setView([32.74620487745896, -16.99095898886067], 10); // starting coords
 
 // Add tile layer (OpenStreetMap)
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -37,6 +37,12 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 // Load GPX file
 new L.GPX("Assets/Madeira.gpx", {
   async: true,
+    polyline_options: {
+    color: "orange",     // line color
+    weight: 4,        // line thickness
+    opacity: 0.8,     // transparency
+    lineCap: "round"  // style of line ends
+  },
   marker_options: {
 	startIconUrl: "https://unpkg.com/leaflet-gpx/pin-icon-start.png",
 	endIconUrl: "https://unpkg.com/leaflet-gpx/pin-icon-end.png",

@@ -133,6 +133,8 @@ html, body {
 /* Map Stuff */
 
 #map {
-  width: 100%;
-  height: 500px;
+  width: 70%;
+  height: 300px;
+  margin: 0 auto;   /* centers it horizontally */
+  display: block;
 }
