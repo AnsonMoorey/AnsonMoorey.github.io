@@ -57,10 +57,21 @@ new L.GPX("Assets/Madeira.gpx", {
     lineCap: "round",  // style of line ends
   },
   marker_options: {
-	firstPointIcon: startIcon,
-	lastPointIcon: endIcon,
+	startIcon: null,
+	endIcon: null,
 	shadowUrl: "",
   }
+  
 }).on("loaded", function(e) {
-  map.fitBounds(e.target.getBounds()); // zoom to track
+  const track = e.target;
+
+  // Zoom map to bounds
+  map.fitBounds(track.getBounds());
+
+  // Manually add start/end markers
+  const latlngs = track.get_latlngs(); // array of LatLng
+  if (latlngs.length > 0) {
+    L.marker(latlngs[0], { icon: startIcon }).addTo(map);
+    L.marker(latlngs[latlngs.length - 1], { icon: endIcon }).addTo(map);
+  }
 }).addTo(map);
