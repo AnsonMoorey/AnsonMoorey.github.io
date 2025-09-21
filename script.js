@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const layers = [
     { el: document.querySelector(".layer1"), speed: 1, offset: 0 },
     { el: document.querySelector(".layer2"), speed: 1, offset: -85 },
-    { el: document.querySelector(".layer3"), speed: 1, offset: -200 },
-    { el: document.querySelector(".layer4"), speed: 1, offset: -300 },
+    { el: document.querySelector(".layer3"), speed: 1, offset: -170 },
+    { el: document.querySelector(".layer4"), speed: 1, offset: -255 },
   ];
 
   // Function to position layers
