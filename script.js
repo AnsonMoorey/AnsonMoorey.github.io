@@ -54,11 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Load GPX file from data-gpx attribute
     const gpxFile = mapDiv.getAttribute("data-gpx");
+	const lineWeight = mapDiv.getAttribute("data-weight") || 4;
     new L.GPX(gpxFile, {
       async: true,
       polyline_options: {
         color: "#FC4C02",
-        weight: 4,
+        weight: lineWeight,
         opacity: 1,
         lineCap: "round"
       },
