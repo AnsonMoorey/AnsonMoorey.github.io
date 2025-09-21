@@ -72,11 +72,24 @@ document.addEventListener("DOMContentLoaded", () => {
       const gpx = e.target;
       map.fitBounds(gpx.getBounds());
 
-      // Update metrics
-      if (metricsDiv) {
-        metricsDiv.querySelector(".distance").textContent = (gpx.get_distance()/1000).toFixed(2) + " km";
-        metricsDiv.querySelector(".time").textContent = gpx.get_duration_string_iso(gpx.get_total_time());
-        metricsDiv.querySelector(".elevation").textContent = gpx.get_elevation_gain().toFixed(0) + " m";
-      }
+	// Update metrics safely
+	if (metricsDiv) {
+	  const distanceEl = metricsDiv.querySelector(".distance");
+	  if (distanceEl) {
+		distanceEl.textContent = (gpx.get_distance() / 1000).toFixed(2) + " km";
+	  }
+
+	  const timeEl = metricsDiv.querySelector(".time");
+	  if (timeEl) {
+		const totalTime = gpx.get_total_time();
+		timeEl.textContent = gpx.get_duration_string_iso(totalTime);
+	  }
+
+	  const elevationEl = metricsDiv.querySelector(".elevation");
+	  if (elevationEl) {
+		elevationEl.textContent = gpx.get_elevation_gain().toFixed(0) + " m";
+	  }
+	}
+
     }).addTo(map);
   });
