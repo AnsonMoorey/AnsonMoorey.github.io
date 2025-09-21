@@ -139,36 +139,75 @@ html, body {
   display: block;
 }
 
-/* Dark themed zoom buttons */
+
+/* ---------------- Leaflet Dark Theme ---------------- */
+.leaflet-container {
+    background: #1e1e1e; /* map container background */
+    color: #ddd;          /* default text color */
+}
+
+/* Zoom buttons */
 .leaflet-control-zoom a {
-    background-color: #222;   /* dark gray background */
-    color: #fff;              /* white + / - */
-    border: 1px solid #444;   /* subtle border */
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* optional shadow */
-    font-weight: bold;
+    background-color: #333; 
+    color: #fff;
+    border: 1px solid #555;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+.leaflet-control-zoom a:hover,
+.leaflet-control-zoom a:focus {
+    background-color: #555;
+    color: #fff;
 }
 
-/* Hover state */
-.leaflet-control-zoom a:hover {
-    background-color: #555;   /* slightly lighter on hover */
-    color: #ffd700;           /* golden text on hover */
-}
-
-/* Dark theme for attribution control */
+/* Attribution control */
 .leaflet-control-attribution {
-    background-color: rgba(30, 30, 30, 0.8); /* dark semi-transparent background */
-    color: #fff; /* white text */
-    border-radius: 4px; /* optional rounded corners */
-    padding: 3px 6px; /* optional padding */
-    font-size: 12px; /* optional text size */
+    background-color: rgba(30,30,30,0.8) !important;
+    color: #ccc !important;
+    font-size: 12px;
 }
-
 .leaflet-control-attribution a {
-    color: #ffd700; /* golden links */
+    color: #ffa500 !important;
     text-decoration: none;
 }
-
 .leaflet-control-attribution a:hover {
     text-decoration: underline;
+}
+
+/* Scale control */
+.leaflet-control-scale-line {
+    background: rgba(50,50,50,0.7);
+    color: #fff;
+    border: 1px solid #666;
+}
+
+/* Layers control */
+.leaflet-control-layers,
+.leaflet-control-layers-toggle {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+.leaflet-control-layers a {
+    color: #ddd;
+}
+.leaflet-control-layers a:hover {
+    color: #ffa500;
+}
+
+/* Popup */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: #2b2b2b;
+    color: #ddd;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.7);
+}
+.leaflet-popup-content a {
+    color: #ffa500;
+}
+
+/* Tooltip */
+.leaflet-tooltip {
+    background: #2b2b2b;
+    color: #ddd;
+    border: 1px solid #555;
 }
