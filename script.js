@@ -38,14 +38,14 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 new L.GPX("Assets/Madeira.gpx", {
   async: true,
     polyline_options: {
-    color: "orange",     // line color
+    color: "#FC4C02",     // line color
     weight: 4,        // line thickness
     opacity: 0.8,     // transparency
     lineCap: "round"  // style of line ends
   },
   marker_options: {
-	startIconUrl: "https://unpkg.com/leaflet-gpx/pin-icon-start.png",
-	endIconUrl: "https://unpkg.com/leaflet-gpx/pin-icon-end.png",
+	startIconUrl: "Assets/start.png",
+	endIconUrl: "Assets/end.png",
 	shadowUrl: "https://unpkg.com/leaflet-gpx/pin-shadow.png"
   }
 }).on("loaded", function(e) {
