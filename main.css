@@ -135,7 +135,7 @@ html, body {
 .map {
   width: 70%;
   height: 300px;
-  margin: 0 auto;   /* centers it horizontally */
+  margin: 2rem auto;   /* centers it horizontally */
   display: block;
 }
 
