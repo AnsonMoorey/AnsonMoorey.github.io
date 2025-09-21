@@ -176,6 +176,7 @@ html, body {
   margin-left: 0px;       /* space away from map */
   border-radius: 12px;
   height: 300px;
+  max-width: 200px;
 }
 
 .map-metrics h2 {

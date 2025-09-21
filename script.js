@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const metricsDiv = container.querySelector(".map-metrics");
 
     // Initialize map
-    const map = L.map(mapDiv).setView([32.7462, -16.9910], 10);
+    const map = L.map(mapDiv).setView([68, -91.935165], 2);
 
     // Tile layer
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
