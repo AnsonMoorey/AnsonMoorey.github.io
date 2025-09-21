@@ -57,8 +57,8 @@ new L.GPX("Assets/Madeira.gpx", {
     lineCap: "round",  // style of line ends
   },
   marker_options: {
-	startIcon: startIcon,
-	endIcon: endIcon,
+	firstPointIcon: startIcon,
+	lastPointIcon: endIcon,
 	shadowUrl: "",
   }
 }).on("loaded", function(e) {
