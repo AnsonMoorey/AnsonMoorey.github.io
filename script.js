@@ -25,53 +25,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // MAP STUFF
 
-// Initialize map
-const map = L.map('map').setView([32.74620487745896, -16.99095898886067], 10); // starting coords
+  const map = L.map('map').setView([32.7462, -16.9910], 10);
 
-// Add tile layer (OpenStreetMap)
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-  maxZoom: 18,
-  attribution: 'Tiles © Esri'
-}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    maxZoom: 18,
+    attribution: 'Tiles © Esri'
+  }).addTo(map);
 
-//Icons
-const startIcon = L.icon({
-  iconUrl: "Assets/start.png",
-  iconSize: [32, 32],   // adjust to your PNG size
-  iconAnchor: [16, 16]  // bottom-center of icon sits on point
-});
-
-const endIcon = L.icon({
-  iconUrl: "Assets/end.png",
-  iconSize: [32, 32],
-  iconAnchor: [16, 16]
-});
-
-// Load GPX file
-new L.GPX("Assets/Madeira.gpx", {
-  async: true,
-    polyline_options: {
-    color: "#FC4C02",     // line color
-    weight: 4,        // line thickness
-    opacity: 1,     // transparency
-    lineCap: "round",  // style of line ends
-  },
-  marker_options: {
-	startIcon: null,
-	endIcon: null,
-	shadowUrl: "",
-  }
-  
-.on("loaded", function(e) {
-  const gpx = e.target;          // the L.GPX object
-  map.fitBounds(gpx.getBounds()); // zoom map to track bounds
-
-  // Access all segments' coordinates safely:
-  gpx.getLayers().forEach(layer => {
-    if (layer instanceof L.Polyline) {
-      const coords = layer.getLatLngs();
-      console.log(coords); // array of LatLng objects
-    }
+  const startIcon = L.icon({
+    iconUrl: "Assets/start.png",
+    iconSize: [32, 32],
+    iconAnchor: [16, 16]
   });
-})
-}).addTo(map);
+
+  const endIcon = L.icon({
+    iconUrl: "Assets/end.png",
+    iconSize: [32, 32],
+    iconAnchor: [16, 16]
+  });
+
+  new L.GPX("Assets/Madeira.gpx", {
+    async: true,
+    polyline_options: {
+      color: "#FC4C02",
+      weight: 4,
+      opacity: 1,
+      lineCap: "round"
+    },
+    marker_options: {
+      startIcon: startIcon,
+      endIcon: endIcon,
+      shadowUrl: ''
+    }
+  }).on("loaded", function(e) {
+    map.fitBounds(e.target.getBounds());
+  }).addTo(map);
+});
