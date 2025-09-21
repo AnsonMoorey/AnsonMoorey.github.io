@@ -56,9 +56,9 @@ new L.GPX("Assets/Madeira.gpx", {
     opacity: 1,     // transparency
     lineCap: "round",  // style of line ends
   },
-  marker_options: {
-    startIcon: null,
-    endIcon: null,
+  markers: {
+    startIcon: startIcon,
+    endIcon: endIcon,
     shadowUrl: null
   },
   display_wpt: false,
