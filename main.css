@@ -154,3 +154,8 @@ html, body {
 .socials img:hover {
   transform: scale(1.1);
 }
+
+iframe.strava-widget {
+  filter: invert(1) hue-rotate(180deg) brightness(0.9);
+  border-radius: 10px;
+}
