@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Update metrics
       if (metricsDiv) {
-        metricsDiv.querySelector(".distance").textContent = gpx.get_distance().toFixed(1) + " km";
-        metricsDiv.querySelector(".time").textContent = gpx.get_total_time_string();
-        metricsDiv.querySelector(".elevation").textContent = gpx.get_elevation_gain().toFixed(0) + " m";
+        metricsDiv.querySelector(".distance").textContent = (gpx.get_distance()/1000).toFixed(2) + " km";
+        metricsDiv.querySelector(".time").textContent = gpx.get_duration_string_iso(gpx.get_total_time());
+        metricsDiv.querySelector(".elevation").textContent = gpx.get_elevation_gain() + " m";
       }
     }).addTo(map);
   });
