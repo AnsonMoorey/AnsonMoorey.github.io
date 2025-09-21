@@ -25,19 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // MAP STUFF
 
-  // Map setup for multiple maps
-  const mapDivs = document.querySelectorAll(".map");
+  const mapContainers = document.querySelectorAll(".map-container");
 
-  mapDivs.forEach(div => {
-    const gpxFile = div.dataset.gpx;
+  mapContainers.forEach((container, index) => {
+    const mapDiv = container.querySelector(".map");
+    const metricsDiv = container.querySelector(".map-metrics");
 
-    const map = L.map(div.id).setView([32.7462, -16.9910], 10); // default coords
+    // Initialize map
+    const map = L.map(mapDiv).setView([32.7462, -16.9910], 10);
 
-    L.tileLayer(
-      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-      { maxZoom: 18, attribution: 'Tiles © Esri' }
-    ).addTo(map);
+    // Tile layer
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 18,
+      attribution: 'Tiles © Esri'
+    }).addTo(map);
 
+    // GPX icons
     const startIcon = L.icon({
       iconUrl: "Assets/start.png",
       iconSize: [16, 16],
@@ -49,13 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
       iconAnchor: [8, 8]
     });
 
+    // Load GPX file from data-gpx attribute
+    const gpxFile = mapDiv.getAttribute("data-gpx");
     new L.GPX(gpxFile, {
       async: true,
       polyline_options: {
         color: "#FC4C02",
         weight: 4,
         opacity: 1,
-        lineCap: "round",
+        lineCap: "round"
       },
       markers: {
         startIcon: startIcon,
@@ -63,7 +68,15 @@ document.addEventListener("DOMContentLoaded", () => {
         shadowUrl: null
       },
       display_wpt: false
-    })
-    .on("loaded", e => map.fitBounds(e.target.getBounds()))
-    .addTo(map);
+    }).on("loaded", function(e) {
+      const gpx = e.target;
+      map.fitBounds(gpx.getBounds());
+
+      // Update metrics
+      if (metricsDiv) {
+        metricsDiv.querySelector(".distance").textContent = gpx.get_distance().toFixed(1) + " km";
+        metricsDiv.querySelector(".time").textContent = gpx.get_total_time_string();
+        metricsDiv.querySelector(".elevation").textContent = gpx.get_elevation_gain().toFixed(0) + " m";
+      }
+    }).addTo(map);
   });

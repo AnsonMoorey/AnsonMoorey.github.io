@@ -32,9 +32,34 @@
 						<img src="Assets/instagram.png" alt="Follow me on Instagram">
 					</a>
 				</div>
-				<div id="map1" class="map" data-gpx="Assets/QMT_80.gpx"></div>
-				<div id="map2" class="map" data-gpx="Assets/MIUT_60.gpx"></div>
-				<div id="map3" class="map" data-gpx="Assets/Madeira.gpx"></div>
+				
+				<div class="map-container">
+				  <div class="map" id="map1" data-gpx="Assets/QMT_80.gpx"></div>
+				  <div class="map-metrics" id="metrics1">
+					<p>Distance: <span class="distance">--</span></p>
+					<p>Time: <span class="time">--</span></p>
+					<p>Elevation Gain: <span class="elevation">--</span></p>
+				  </div>
+				</div>
+
+				<div class="map-container">
+				  <div class="map" id="map2" data-gpx="Assets/MIUT_60.gpx"></div>
+				  <div class="map-metrics" id="metrics2">
+					<p>Distance: <span class="distance">--</span></p>
+					<p>Time: <span class="time">--</span></p>
+					<p>Elevation Gain: <span class="elevation">--</span></p>
+				  </div>
+				</div>
+
+				<div class="map-container">
+				  <div class="map" id="map3" data-gpx="Assets/Madeira.gpx"></div>
+				  <div class="map-metrics" id="metrics3">
+					<p>Distance: <span class="distance">--</span></p>
+					<p>Time: <span class="time">--</span></p>
+					<p>Elevation Gain: <span class="elevation">--</span></p>
+				  </div>
+				</div>
+
 			</div>
 		</main>
 		<script src="script.js"></script>

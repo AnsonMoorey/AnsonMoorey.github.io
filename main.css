@@ -131,7 +131,16 @@ html, body {
   transform: scale(1.1);
 }
 
-/* Map Stuff */
+/* ------------- Maps -------------- */
+.map-container {
+  display: flex;
+  align-items: flex-start; /* aligns metrics with top of map */
+  justify-content: center;  /* center horizontally */
+  gap: 2rem;               /* spacing between map and metrics */
+  margin: 2rem auto;        /* vertical spacing between containers */
+  width: 90%;
+  max-width: 1000px;
+}
 
 .map {
   width: 70%;
@@ -139,6 +148,16 @@ html, body {
   margin: 2rem auto;   /* centers it horizontally */
   display: block;
 }
+
+.map-metrics {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Monaco, monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 
 
 /* ---------------- Leaflet Dark Theme ---------------- */
