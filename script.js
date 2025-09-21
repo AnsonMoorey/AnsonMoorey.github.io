@@ -37,14 +37,14 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 //Icons
 const startIcon = L.icon({
   iconUrl: "Assets/start.png",
-  iconSize: [8, 8],   // adjust to your PNG size
-  iconAnchor: [4, 4]  // bottom-center of icon sits on point
+  iconSize: [16, 16],   // adjust to your PNG size
+  iconAnchor: [8, 8]  // bottom-center of icon sits on point
 });
 
 const endIcon = L.icon({
   iconUrl: "Assets/end.png",
-  iconSize: [8, 8],
-  iconAnchor: [4, 4]
+  iconSize: [16, 16],
+  iconAnchor: [8, 8]
 });
 
 // Load GPX file
