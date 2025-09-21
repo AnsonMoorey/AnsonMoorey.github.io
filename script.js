@@ -62,16 +62,16 @@ new L.GPX("Assets/Madeira.gpx", {
 	shadowUrl: "",
   }
   
-}).on("loaded", function(e) {
-  const track = e.target;
+.on("loaded", function(e) {
+  const gpx = e.target;          // the L.GPX object
+  map.fitBounds(gpx.getBounds()); // zoom map to track bounds
 
-  // Zoom map to bounds
-  map.fitBounds(track.getBounds());
-
-  // Manually add start/end markers
-  const latlngs = track.get_latlngs(); // array of LatLng
-  if (latlngs.length > 0) {
-    L.marker(latlngs[0], { icon: startIcon }).addTo(map);
-    L.marker(latlngs[latlngs.length - 1], { icon: endIcon }).addTo(map);
-  }
+  // Access all segments' coordinates safely:
+  gpx.getLayers().forEach(layer => {
+    if (layer instanceof L.Polyline) {
+      const coords = layer.getLatLngs();
+      console.log(coords); // array of LatLng objects
+    }
+  });
+})
 }).addTo(map);
