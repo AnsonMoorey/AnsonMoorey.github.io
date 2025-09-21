@@ -154,3 +154,21 @@ html, body {
     background-color: #555;   /* slightly lighter on hover */
     color: #ffd700;           /* golden text on hover */
 }
+
+/* Dark theme for attribution control */
+.leaflet-control-attribution {
+    background-color: rgba(30, 30, 30, 0.8); /* dark semi-transparent background */
+    color: #fff; /* white text */
+    border-radius: 4px; /* optional rounded corners */
+    padding: 3px 6px; /* optional padding */
+    font-size: 12px; /* optional text size */
+}
+
+.leaflet-control-attribution a {
+    color: #ffd700; /* golden links */
+    text-decoration: none;
+}
+
+.leaflet-control-attribution a:hover {
+    text-decoration: underline;
+}
