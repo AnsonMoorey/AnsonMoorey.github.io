@@ -100,6 +100,7 @@ html, body {
   font-family: "Anton", sans-serif;
   font-weight: 400;
   margin-bottom: 2rem;
+  /*border-bottom: 2px solid #222;*/
 }
 
 .font-mask {
@@ -116,10 +117,12 @@ html, body {
 
 .font-mask.A {
   background-position: 50% 6%;
+  transform: translateX(-5rem); /* move word A left */
 }
 
 .font-mask.B {
   background-position: 50% 50%;
+  transform: translateX(3rem);  /* move word B right */
   margin-top: -0.5em;
 }
 
@@ -144,8 +147,10 @@ html, body {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 20rem;
+  padding-bottom: 2rem;
+  margin: 2rem auto 20rem auto;  /* centers the whole div */
+  /*border-bottom: 2px solid #444;*/
+  width: 200px;
 }
 
 .socials img {
@@ -285,4 +290,52 @@ html, body {
     background: #2b2b2b;
     color: #ddd;
     border: 1px solid #555;
+}
+
+/* ------ FOG ------ */
+/* ------ FOG LAYERS ------ */
+.fog-overlay, .fog-overlay2 {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background: url("Assets/fog.png") repeat;
+  background-size: 100vw 100vh;
+  opacity: 0.5;
+  --x: 0px;
+  --y: 0px;
+  background-position: var(--x) var(--y);
+  transition: background-position 0.2s ease-out; /* smooth mouse response */
+}
+
+/* Layer 1 drift */
+.fog-overlay {
+  animation: drift1 40s linear infinite;
+  z-index: 11;
+  /*filter: hue-rotate(0deg) saturate(500%);*/
+}
+
+/* Layer 2 drift (slightly faster) */
+.fog-overlay2 {
+  animation: drift2 70s linear infinite; /* slightly different speed */
+  z-index: 9;
+  /*filter: hue-rotate(120deg) saturate(500%);*/
+}
+
+@keyframes drift1 {
+  from {
+    background-position: -100vw -100vh; /* start offscreen top-left */
+  }
+  to {
+    background-position: 100vw 100vh;        /* drift into visible area */
+  }
+}
+
+@keyframes drift2 {
+  from {
+    background-position: -150vw -150vh; /* slightly offset start */
+  }
+  to {
+    background-position: 100vw 100vh;
+  }
 }

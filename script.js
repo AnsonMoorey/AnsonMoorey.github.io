@@ -1,3 +1,6 @@
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const layers = [
     { el: document.querySelector(".layer1"), speed: 1, offset: 0 },
